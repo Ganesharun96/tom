@@ -2,8 +2,12 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,9 +15,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.example.demo.model.CustomerModel;
 
 import com.example.demo.service.CustomerService;
-
+@Controller
 public class CustomerController {
-	@Autowired CustomerService customerservice;
+	
+	
 	@RequestMapping(value="/add",method=RequestMethod.GET)
 	public String read(Model model) {
 		
@@ -21,15 +26,15 @@ public class CustomerController {
 		return "Display";
 	}
 	@RequestMapping(value="/add", method= RequestMethod.POST)
-	public String printRepaymentSchedule(@ModelAttribute("show")CustomerModel customermodel,Model model)	{
-			
+	public String printRepaymentSchedule(@Valid @ModelAttribute("show")CustomerModel customermodel,BindingResult result)	{
 		
-		model.addAttribute("show",customermodel);
-return "Display";	
-		}
-	
-	
-	
+		if(result.hasErrors()) {
+			
+			            return  "Display";
+			            }
+		return "Print";
+			    }
 
-	
+       
+		
 }

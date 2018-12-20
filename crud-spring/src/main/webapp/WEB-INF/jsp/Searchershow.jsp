@@ -92,8 +92,8 @@ tr:nth-child(even){background-color: #f2f2f2}
 
 	<div class="topnav" id="myTopnav">
 		<a href="/add">HOME</a> <a href="#news"
-			class="active">CUSTOMERSDETAILS</a> <a href="/delete">DELETE</a>
-			<a href="/update">UPDATE</a><a href="/search">SEARCH</a>
+			>CUSTOMERSDETAILS</a> <a href="/delete">DELETE</a>
+			<a href="/update">UPDATE</a><a href="/search" class="active">SEARCH</a>
 	 <i class="fa fa-bars"></i>
 		</a>
 	</div>
@@ -111,8 +111,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 		<div id="content">
 
 
-
-			<table>
+<table>
 			<tr><th>Customer Code</th>
 				<th>Customer Name</th>
 				<th>Customer Address</th>
@@ -125,28 +124,21 @@ tr:nth-child(even){background-color: #f2f2f2}
 		
 			</tr>
 <!-- 		</table> -->
-		<c:forEach  var="element" items="${results}">
+<%-- 		<c:forEach  var="element" items="${results}"> --%>
 				<tr>
-				<th>${element.customerCode}</th> 
-					<th>${element.customerName}</th>
-					<th>${element.customerAddress}</th>
-					<th>${element.customerPincode}</th>
-					<th>${element.customerEmail}</th>
-					<th>${element.customerNumber}</th>
-					<th>${element.registrationDate}</th>
-					<th>${element.createdBy}</th>
-					<th>${element.modifiedDate}</th>
+				<th>${put.customerCode}</th> 
+					<th>${put.customerName}</th>
+					<th>${put.customerAddress}</th>
+					<th>${put.customerPincode}</th>
+					<th>${put.customerEmail}</th>
+					<th>${put.customerNumber}</th>
+					<th>${put.registrationDate}</th>
+					<th>${put.createdBy}</th>
+					<th>${put.modifiedDate}</th>
 				</tr>
-			</c:forEach>
+<%-- 			</c:forEach> --%>
 		</table>
 
-
-
-
-		</div>
- 
-
-	</div>
 
 
 </body>

@@ -7,6 +7,11 @@ import org.springframework.ui.Model;
 import com.example.demo.model.CustomerModel;
 
 public interface CustomerServiceInterface {
-	
+	public List<CustomerModel>calc();
+//	public List<CustomerModel> calc(Model model);
+public void method(CustomerModel customermodel);
+public void searcher(int id,Model model);
+
+
 
 }

@@ -1,6 +1,8 @@
 package com.example.demo.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -23,7 +25,7 @@ public class CustomerModel {
 	private String customerPincode;
 	private String customerEmail;
 	private String customerNumber;
-	@DateTimeFormat(pattern="MM/dd/yyyy")
+//	@DateTimeFormat(pattern="MM/dd/yyyy")
 	
 	private String registrationDate;
 	private String createdBy;
@@ -32,7 +34,7 @@ public class CustomerModel {
 	
 
 	
-	@Id
+	@Id 
 	public Integer getCustomerCode() {
 		return customerCode;
 	}

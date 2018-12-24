@@ -91,7 +91,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 <body>
 
 	<div class="topnav" id="myTopnav">
-		<a href="/add">HOME</a> <a href="#news"
+		<a href="/add">HOME</a> <a href="/adder"
 			>CUSTOMERSDETAILS</a> <a href="/delete">DELETE</a>
 			<a href="/update">UPDATE</a><a href="/search" class="active">SEARCH</a>
 	 <i class="fa fa-bars"></i>

@@ -93,7 +93,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 	<div class="topnav" id="myTopnav">
 		<a href="/add">HOME</a> <a href="/adder"
 			>CUSTOMERSDETAILS</a> <a href="/delete">DELETE</a>
-			<a href="/update">UPDATE</a><a href="/search" class="active">SEARCH</a>
+			<a href="/update"class="active">UPDATE</a><a href="/search" >SEARCH</a>
 	 <i class="fa fa-bars"></i>
 		</a>
 	</div>
@@ -112,10 +112,12 @@ tr:nth-child(even){background-color: #f2f2f2}
 
 
 
-			<form:form action= "final" modelAttribute="put" method="POST"> 
-					Enter code for search <form:input type="number" path="customerCode"/>
+			<form:form action= "updating" modelAttribute="updated" method="POST"> 
+					Enter code for update <form:input type="number" path="customerCode"/>
 					 <input type="submit" value="Submit">
 					</form:form>
+					
+					
 
 
 </body>

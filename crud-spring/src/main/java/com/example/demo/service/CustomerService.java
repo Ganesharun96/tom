@@ -40,18 +40,53 @@ public class CustomerService implements CustomerServiceInterface {
 
 	@Override
 	public List<CustomerModel> calc() {
-		// TODO Auto-generated method stub
+	
 		
 		return customerrepository.findAll();
 	}
 
 
 
+//	@Override
+//	public void searcher(int customerCode, Model model) {
+//		model.addAttribute("put",customerrepository.findById(customerCode));
+//		
+//	}
+
+
+
 	@Override
-	public void searcher(int id, Model model) {
-		model.addAttribute("put",customerrepository.findById(id));
+	public void search(Model model, CustomerModel customermodel) {
+		model.addAttribute("put",customerrepository.findBycustomerCode(customermodel.getCustomerCode()));
 		
 	}
+
+
+
+	@Override
+	public void delete( CustomerModel customermodel) {
+		customerrepository.delete(customermodel);
+		
+		
+		
+	}
+
+
+
+	@Override
+	public void update(CustomerModel customermodel,Model model) {
+		model.addAttribute("show",customerrepository.findBycustomerCode(customermodel.getCustomerCode()));
+		
+		
+	}
+
+
+
+	
+	
+
+
+	
 
 //	@Override
 //	public List<CustomerModel> calc(Model model) {

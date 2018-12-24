@@ -97,7 +97,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 <body>
 
 	<div class="topnav" id="myTopnav">
-		<a href="/add" class="active">HOME</a> <a href="#news"
+		<a href="/add" class="active">HOME</a> <a href="/adder "
 			>CUSTOMERSDETAILS</a> <a href="/delete">DELETE</a>
 			<a href="/update">UPDATE</a><a href="/search">SEARCH</a>
 	 <i class="fa fa-bars"></i>
@@ -144,10 +144,8 @@ customerNumber:<form:input path="customerNumber" />
 
 		<br>
 		<br>
-registrationDate:<form:input path="registrationDate" value="<%=date%>" />
- <td><form:errors path="registrationDate" cssStyle="color: #ff0000;" /></td>
-
-		<br>
+registrationDate:<form:input type="hidden" path="registrationDate" value="<%=date%>" />
+        <br>
 		<br>
 createdBy:<form:input path="createdBy"/>
  <td><form:errors path="createdBy" cssStyle="color: #ff0000;"/></td>
@@ -157,14 +155,14 @@ createdBy:<form:input path="createdBy"/>
 modifiedDate:<form:input path="modifiedDate" />
  <td><form:errors path="modifiedDate" cssStyle="color: #ff0000;"/></td>
 
-		<%-- <br>
-		<br><%= new java.util.Date() %> --%>
+		 <br>
+		<br>
 		
 		<input type="submit" value="submit" />
-		<br>
+		<br><br>
 	</form:form>
 
-
+<a href="/first"> Back</a><br>
 </body>
 </html>
 

@@ -92,8 +92,8 @@ tr:nth-child(even){background-color: #f2f2f2}
 
 	<div class="topnav" id="myTopnav">
 		<a href="/add">HOME</a> <a href="/adder"
-			>CUSTOMERSDETAILS</a> <a href="/delete">DELETE</a>
-			<a href="/update">UPDATE</a><a href="/search" class="active">SEARCH</a>
+			>CUSTOMERSDETAILS</a> <a href="/delete"class="active">DELETE</a>
+			<a href="/update">UPDATE</a><a href="/search" >SEARCH</a>
 	 <i class="fa fa-bars"></i>
 		</a>
 	</div>
@@ -101,7 +101,9 @@ tr:nth-child(even){background-color: #f2f2f2}
 
 	<div id="wrapper">
 		<div id="header">
-			<h2>CUSTOMER DETAILS</h2>
+			<h2>CUSTOMER  DELETED DETAILS</h2>
+			
+			<h1>Successfully deleted</h1>
 		</div>
 	</div>
 	
@@ -111,11 +113,35 @@ tr:nth-child(even){background-color: #f2f2f2}
 		<div id="content">
 
 
+<table>
+			<tr>
+			<th>Customer Code</th>
+				<th>Customer Name</th>
+				<th>Customer Address</th>
+				<th>Customer Pincode</th>
+				<th>Customer E-mail</th>
+				<th>Customer Number</th>
+				<th>Registration Date</th>
+				<th>Created By</th>
+				<th>Modified Date</th>
+		
+			</tr>
+<!-- 		</table> -->
+<%-- 		<c:forEach  var="element" items="${results}"> --%>
+				<tr>
+				<th>${deleted.customerCode}</th> 
+					<th>${deleted.customerName}</th>
+					<th>${deleted.customerAddress}</th>
+					<th>${deleted.customerPincode}</th>
+					<th>${deleted.customerEmail}</th>
+					<th>${deleted.customerNumber}</th>
+					<th>${deleted.registrationDate}</th>
+					<th>${deleted.createdBy}</th>
+					<th>${deleted.modifiedDate}</th>
+				</tr>
+<%-- 			</c:forEach> --%>
+		</table>
 
-			<form:form action= "final" modelAttribute="put" method="POST"> 
-					Enter code for search <form:input type="number" path="customerCode"/>
-					 <input type="submit" value="Submit">
-					</form:form>
 
 
 </body>
